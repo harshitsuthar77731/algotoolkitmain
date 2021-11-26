@@ -6,7 +6,9 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <span className="navbar-brand">
-          <h2>Sieve</h2>
+          <h2>
+            <u>Sieve Of Eratosthenes</u>
+          </h2>
         </span>
         <button
           className="navbar-toggler"
