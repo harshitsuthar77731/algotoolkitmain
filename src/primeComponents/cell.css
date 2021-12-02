@@ -11,7 +11,7 @@
 }
 
 .cell-prime {
-  background-color: yellow;
+  background-color: royalblue;
   animation-name: isPrime;
   animation-duration: 1s;
   animation-delay: 0s;
