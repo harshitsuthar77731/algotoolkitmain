@@ -1,7 +1,8 @@
-import graph from "./images/graph.png";
-import primes from "./images/primes.jpg";
-import sort from "./sort.png";
-import queen from "./images/queen.PNG";
+import graph from "./images/names.png";
+import primes from "./images/slide.jpg";
+import sort from "./images/nini.png";
+import sortt from "./images/oini.png";
+import queen from "./images/nono1.jpg";
 import binSearch from "./images/binarytree.png";
 import convex from "./images/convexHull.png";
 import puzzle from "./images/15puzzle.PNG";
@@ -27,7 +28,7 @@ export function getDetails() {
       title: "Sorting Algorithm",
       description: "Compare different sorting algorithms",
       route: "/sort",
-      img: sort,
+      img: sortt,
     },
     {
       id: 9,

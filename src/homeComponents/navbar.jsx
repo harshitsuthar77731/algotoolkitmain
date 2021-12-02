@@ -50,7 +50,9 @@ class Navbar extends Component {
       // </nav>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-          AlgoToolKit
+          <h1>
+            <b>AlgoToolKit</b>
+          </h1>
         </a>
         <button
           class="navbar-toggler"
@@ -67,18 +69,14 @@ class Navbar extends Component {
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#">
-                Home <span class="sr-only">(current)</span>
+                <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                Features
-              </a>
+              <a class="nav-link" href="#"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                Pricing
-              </a>
+              <a class="nav-link" href="#"></a>
             </li>
           </ul>
           <span class="navbar-text"></span>
