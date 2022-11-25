@@ -1,0 +1,78 @@
+class Solution {
+public:
+    bool wordPattern(string pattern, string s) {
+        vector<string>v;
+        string temp ="";
+        map<char,string>m,m1;
+        for(int i=0;i<s.length();i++)
+        {
+            if(s[i]-' '!=0)
+            {
+                temp = temp+s[i];
+            }
+            
+            if(s[i]-' '==0)
+            {
+                if(temp.size()!=0)
+                {
+                    v.push_back(temp);
+                }
+                temp="";
+            
+            }
+            
+        }
+        v.push_back(temp);
+        
+        
+        // checking size
+        if(v.size()!=pattern.length())
+        {
+            return false;
+        }
+       
+
+        // storing data in map
+        for(int i=0;i<v.size();i++)
+        {
+            string temp2 = m[pattern[i]];
+            m1[pattern[i]]=v[i];
+            if(temp2.size()>0)
+            {
+                continue;
+            }
+            m[pattern[i]]=v[i];
+            
+        }
+        
+        //checking pattern
+        for(int i=0;i<pattern.size();i++)
+        {
+            if(m1[pattern[i]]!=m[pattern[i]])
+            {
+                return false;
+            }
+            for(int j = i+1;j<pattern.size();j++)
+            {
+                if(m[pattern[i]]==m[pattern[j]]&&pattern[i]!=pattern[j])
+                {
+                    return false;
+                }
+            }
+        }
+        for(int i=0;i<v.size();i++)
+        {
+            string temp2 = m[pattern[i]];
+            char temp3 = pattern[i];
+            if(temp2 == v[i]&&temp3 == pattern[i])
+            {
+                continue;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+};

@@ -1,0 +1,42 @@
+class Solution {
+public:
+    bool isIsomorphic(string s, string t) {
+        map<char,char>m,m1;
+        for(int i=0;i<s.size();i++)
+        {
+            auto it = m.find(s[i]);
+            if(it==m.end())
+            {
+                m[s[i]]=t[i];
+            }
+            auto it2 = m1.find(t[i]);
+            if(it2==m1.end())
+            {
+                m1[t[i]]=s[i];
+            }
+        }
+        cout<<m1.size()<<" "<<m.size()<<endl;
+        if(m1.size()!=m.size())
+        {
+            return false;
+        }
+        for(int i=0;i<s.size();i++)
+        {
+            auto it = m.find(s[i]);
+            if(it==m.end())
+            {
+                m[s[i]]=t[i];
+            }
+        }
+        string temp = "";
+        for(int i=0;i<s.size();i++)
+        {
+            temp+=m[s[i]];
+        }
+        cout<<temp<<endl;
+        if(temp==t)
+        return true;
+        else
+            return false;
+    }
+};
